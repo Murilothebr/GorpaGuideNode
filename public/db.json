@@ -1,0 +1,107 @@
+{
+  "restaurantes": [
+    {
+      "id": 1,
+      "name": "Mc donalds",
+      "imagem": "/imgGuiaGastronomico/restaurante1.png",
+      "endereco": "2",
+      "telefone": "2",
+      "horarioFuncionamento": "2"
+    },
+    {
+      "id": 2,
+      "name": "Burger King",
+      "imagem": "/imgGuiaGastronomico/restaurante2.png",
+      "endereco": "5",
+      "telefone": "5",
+      "horarioFuncionamento": "5"
+    },
+    {
+      "id": 3,
+      "name": "Pigalle",
+      "imagem": "/imgGuiaGastronomico/restaurante3.png",
+      "endereco": "5",
+      "telefone": "5",
+      "horarioFuncionamento": "5"
+    },
+    {
+      "id": 3,
+      "name": "Pigalle",
+      "imagem": "/imgGuiaGastronomico/restaurante1.png",
+      "endereco": "5",
+      "telefone": "5",
+      "horarioFuncionamento": "5"
+    },
+    {
+      "id": 3,
+      "name": "Pigalle",
+      "imagem": "/imgGuiaGastronomico/restaurante2.png",
+      "endereco": "5",
+      "telefone": "5",
+      "horarioFuncionamento": "5"
+    },
+    {
+      "id": 3,
+      "name": "Pigalle",
+      "imagem": "/imgGuiaGastronomico/restaurante3.png",
+      "endereco": "5",
+      "telefone": "5",
+      "horarioFuncionamento": "5"
+    },
+    {
+      "id": "42",
+      "name": "Outback",
+      "imagem": "/imgGuiaGastronomico/restaurante6.jpg",
+      "endereco": "Rua Sérgio Gasparetto, 41, 41",
+      "telefone": "42984214715",
+      "horarioFuncionamento": ""
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "João",
+      "email": "",
+      "telefone": "",
+      "restaurante": ""
+    },
+    {
+      "id": 1,
+      "name": "João",
+      "email": "",
+      "telefone": "",
+      "restaurante": ""
+    },
+    {
+      "id": 1,
+      "name": "João",
+      "email": "",
+      "telefone": "",
+      "restaurante": ""
+    },
+    {
+      "id": 1,
+      "name": "João",
+      "email": "",
+      "telefone": "",
+      "restaurante": ""
+    },
+    {
+      "id": 1,
+      "name": "João",
+      "email": "",
+      "telefone": "",
+      "restaurante": ""
+    }
+  ],
+  "cidades": [
+    {
+      "id": 1,
+      "name": "São Paulo"
+    },
+    {
+      "id": 2,
+      "name": "Rio de Janeiro"
+    }
+  ]
+}
