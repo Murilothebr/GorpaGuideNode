@@ -311,9 +311,12 @@
 
 					console.log(enviar.id)
 					console.log(status(dadosDoFormulario));
-					document.getElementById('form').submit();
 
 					window.alert("Cadastro Concluido");
+
+					setTimeout(() => {
+						location.reload();
+					}, 1500);
 
 				} else {
 					alert('Por favor, preencha todos os campos obrigatórios.');
