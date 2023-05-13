@@ -47,8 +47,8 @@
 		content="https://www.guarapuava.pr.gov.br/wp-content/themes/prefeitura/assets/imgs/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="google-site-verification" content="sCzEHnE-ce5HQojO9BQs-xst5JreRLNBEGGSYY4HyKo">
-	<link rel="stylesheet" type="text/css" href="/css/1613756303888-style.min.css">
-	<link rel="stylesheet" type="text/css" href="/css/cssGuiaGastro.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/1613756303888-style.min.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/cssGuiaGastro.css">
 
 
 	<script type="text/javascript" async="" src="/img/recaptcha__pt.js.download" crossorigin="anonymous"
@@ -155,7 +155,7 @@
 					</button>
 					<div>
 						<h1>
-							<a href="./pages/site prefeitura guarapuava/HomeGuarapuava.html">
+							<a href="/public/pages/site prefeitura guarapuava/HomeGuarapuava.html">
 								<img src="/img/logo_prefeitura.png" alt="Prefeitura de Guarapuava" width="250">
 							</a>
 						</h1>
@@ -239,18 +239,17 @@
 
 			<body onload="criarCardsDeRestaurantes()">
 
-				<script src="/Objects/restaurante.js"></script>
+				<script src="/public/Objects/restaurante.js"></script>
 			</body>
 
 
 		</section>
-		<center> <button href="cadastroRestaurante.html" id="pagina-cadastro" class="btn btn-primary">CADASTRAR RESTAURANTE</button> </center>
-
+		<center> <button href="/public/pages/cadastroRestaurante.html" id="pagina-cadastro" class="btn btn-primary">CADASTRAR RESTAURANTE</button> </center>
 		<script>
 
 			this.document.getElementById("pagina-cadastro").addEventListener("click", function () {
 				if (confirm("Deseja mesmo cadastrar um restaurante?") == true) {
-					window.location.href = "cadastroRestaurante.html";
+					window.location.href = "/public/pages/cadastroRestaurante.html";
 				}
 				else {
 					window.alert("Ok, Pode aproveitar o site!");
