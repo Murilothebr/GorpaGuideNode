@@ -35,6 +35,8 @@ class Restaurantes extends Restaurante {
 const restaurantes = [];
 
 function criarCardsDeRestaurantes() {
+  'use strict';
+
   const container = document.querySelector(".restaurant-cards");
   restaurantes.forEach((restaurante) => {
     const card = `

@@ -1,3 +1,28 @@
+.error-message {
+  display: none;
+  color: red;
+  margin-top: 5px;
+}
+
+.error-message.show {
+  display: block;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:invalid::placeholder {
+  color: red;
+}
+
+input:invalid + span::before {
+  content: "⚠ ";
+  color: red;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
 .checkbox-wrapper {
   display: flex;
   align-items: flex-start;

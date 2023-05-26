@@ -55,6 +55,14 @@
       "endereco": "Rua Sérgio Gasparetto, 41, 41",
       "telefone": "42984214715",
       "horarioFuncionamento": ""
+    },
+    {
+      "id": "12",
+      "name": "Murilo Nunes Marcal",
+      "imagem": "public/assets/resources/imgGuiaGastronomicoci-cd-access-ssh.png",
+      "endereco": "Rua Sérgio Gasparetto, 41, 41",
+      "telefone": "(42) 98844-6492",
+      "horarioFuncionamento": "12"
     }
   ],
   "users": [
