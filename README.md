@@ -18,7 +18,7 @@ GorpaGuide com node
 ### X Usar let ou const ao invés de var
 ### X Nomes de arquivos HTML, JS e CSS minúsculos e separados por hífen (dashed-case)
 	
-Formulário
+### Formulário
 
 ### X Validação de formulário com onsubmit usando os métodos tradicionais - é a fase executada após a validação via HTML5
 ### X Validação de formulário com HTML5 API
