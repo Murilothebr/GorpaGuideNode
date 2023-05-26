@@ -47,8 +47,8 @@
 		content="https://www.guarapuava.pr.gov.br/wp-content/themes/prefeitura/assets/imgs/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="google-site-verification" content="sCzEHnE-ce5HQojO9BQs-xst5JreRLNBEGGSYY4HyKo">
-	<link rel="stylesheet" type="text/css" href="../css/1613756303888-style.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/css-cadastro-restaurante.css">
+	<link rel="stylesheet" type="text/css" href="../assets/libraries/css/1613756303888-style.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/libraries/css/css-cadastro-restaurante.css">
 
 
 	<script type="text/javascript" async="" src="/img/recaptcha__pt.js.download" crossorigin="anonymous"
@@ -150,7 +150,7 @@
 					<div>
 						<h1>
 							<a href="./site prefeitura guarapuava/HomeGuarapuava.html">
-								<img src="/img/logo_prefeitura.png" alt="Prefeitura de Guarapuava" width="250">
+								<img src="../assets/resources/img/logo_prefeitura.png" alt="Prefeitura de Guarapuava" width="250">
 							</a>
 						</h1>
 					</div>
@@ -232,8 +232,7 @@
 
 			<div class="form-group">
 				<label for="profile-pic">Logo Restaurante</label>
-				<input type="file" class="form-control-file form-control" id="inputPhoto" name="photo" accept="image/*"
-					required>
+				<input type="file" class="form-control-file form-control" id="inputPhoto" name="photo" accept="image/*" required>
 			</div>
 
 			<div class="form-group">
@@ -243,7 +242,12 @@
 
 			<div class="form-group">
 				<label for="phone">Telefone</label>
-				<input type="tel" class="form-control" id="phone" name="phone" required>
+				<input type="tel" class="form-control" id="phone" name="phone" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}$" required>
+			</div>
+
+			<div class="form-group">
+				<label for="phone">Email</label>
+				<input type="email" class="form-control" id="email" name="email" required>
 			</div>
 
 			<div class="form-group">
@@ -251,9 +255,17 @@
 				<input type="text" class="form-control" id="opening_hours" name="opening_hours" required>
 			</div>
 
+			<div class="checkbox-wrapper">
+				<input type="checkbox" id="delivery-checkbox">
+				<label for="delivery-checkbox" class="checkbox-label">Delivery</label>
+			  
+				<input type="checkbox" id="balcao-checkbox">
+				<label for="balcao-checkbox" class="checkbox-label">Balcão</label>
+			</div>
+
 			<div class="form-group text-center">
-				<input id="enviar" type="submit" class="btn btn-primary" value="Adicionar Restaurante" tag="enter"
-					required>
+				<input type="submit" id="enviar" class="btn btn-primary" value="Adicionar Restaurante" tag="enter"
+				required>
 			</div>
 		</form>
 	</div>
@@ -298,12 +310,12 @@
 
 				if (document.getElementById('name').checkValidity() &&
 					document.getElementById('inputPhoto').checkValidity() &&
-					document.getElementById('address').checkValidity()) {
+					document.getElementById('phone').checkValidity() ) {
 
 					const dadosDoFormulario = {
 						id: document.getElementById('id').value,
 						name: document.getElementById('name').value,
-						imagem: "/public/imgGuiaGastronomico/" + document.getElementById('inputPhoto').files[0].name,
+						imagem: "public/assets/resources/imgGuiaGastronomico" + document.getElementById('inputPhoto').files[0].name,
 						endereco: document.getElementById('address').value,
 						telefone: document.getElementById('phone').value,
 						horarioFuncionamento: document.getElementsByName('opening_hours')[0].value
@@ -312,6 +324,12 @@
 					console.log(enviar.id)
 					console.log(status(dadosDoFormulario));
 
+					
+
+					enviar.innerHTML = 'Restaurante adicionado';
+
+					window.alert(enviar.innerHTML);
+
 					window.alert("Cadastro Concluido");
 
 					setTimeout(() => {
@@ -319,6 +337,10 @@
 					}, 1500);
 
 				} else {
+					if(! document.getElementById('phone').checkValidity())
+					{
+						alert('Por favor, preencha o campo telefone no padrão, (xx) xxxx-xxxx');
+					}
 					alert('Por favor, preencha todos os campos obrigatórios.');
 				}
 			});
