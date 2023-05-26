@@ -6,9 +6,9 @@ GorpaGuide com node
 ### Aplicação:  node server.js
 ### Db : npx json-server --watch db.json
 
-## Parte II 
+# Parte II 
 
-### Qualidade do código
+## Qualidade do código
 
 ### X Usar um Style Guide - apresentar o uso de pelo menos 10 regras do style escolhido (sugerido AirBnb)
 ### Usar um Lint - corrigir todos os problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
@@ -18,7 +18,7 @@ GorpaGuide com node
 ### X Usar let ou const ao invés de var
 ### X Nomes de arquivos HTML, JS e CSS minúsculos e separados por hífen (dashed-case)
 	
-### Formulário
+## Formulário
 
 ### X Validação de formulário com onsubmit usando os métodos tradicionais - é a fase executada após a validação via HTML5
 ### X Validação de formulário com HTML5 API
