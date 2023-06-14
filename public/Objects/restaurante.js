@@ -35,8 +35,6 @@ class Restaurantes extends Restaurante {
 const restaurantes = [];
 
 function criarCardsDeRestaurantes() {
-  'use strict';
-
   const container = document.querySelector(".restaurant-cards");
   restaurantes.forEach((restaurante) => {
     const card = `
@@ -70,7 +68,7 @@ function popularRestaurantes(json) {
   }
 }
 
-fetch('/db.json')
+fetch('http://localhost:3000/restaurantes')
   .then(response => response.json())
   .then(data => {
     console.log("fetch");
