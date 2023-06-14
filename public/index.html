@@ -2,248 +2,80 @@
 <html lang="pt-br" class="supports-js supports-fontface supports-generatedcontent">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
 	<title>
 		Guia Gastronomico | Prefeitura de Guarapuava
 	</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="Midias">
-	<link rel="pingback" href="https://www.guarapuava.pr.gov.br/xmlrpc.php">
-
-
-	<link rel="stylesheet" type="text/css" href="./assets/libraries/css/1613756303888-style.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/libraries/css/css-cadastro-restaurante.css">
 	<link rel="stylesheet" type="text/css" href="./assets/libraries/css/css-guia-gastro.css">
+	<link rel="stylesheet" type="text/css" href="./assets/libraries/css/css-prefeitura.css">
 </head>
 
+<header class="header">
+	<div class="logo">
+		<a href="/pages/site prefeitura guarapuava/HomeGuarapuava.html">
+			<img src="/assets/resources/img/logo_prefeitura.png" alt="Logo">
+		</a>
+	</div>
+	<nav class="menu">
+		<ul class="menu-list">
+			<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/">Administração</a></li>
+			<li><a href="https://www.guarapuava.pr.gov.br/midias/">Midias</a></li>
+			<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/">Administração Direta</a></li>
+			<li><a href="http://www.pmg.pr.gov.br/legislacao/">Legislação</a></li>
+		</ul>
+		</button>
+	</nav>
+</header>
+
+<body onload="criarCardsDeRestaurantes()">
+
 	<section class="restaurante-menu">
-		<section class="restaurant-cards">
-
-			<body onload="criarCardsDeRestaurantes()">
-
-				<script src="./Objects/restaurante.js"></script>
-			</body>
+		<section class="restaurant-cards"></section>
+	</section>
 
 
-		</section>
+	<button href="./pages/cadastro-restaurante.html" id="pagina-cadastro" class="btn btn-primary">CADASTRAR
+		RESTAURANTE</button>
 
-		<center> <button href="./pages/cadastro-restaurante.html" id="pagina-cadastro" class="btn btn-primary">CADASTRAR RESTAURANTE</button> </center>
-		
-		<script>
-			'use strict';
 
-			this.document.getElementById("pagina-cadastro").addEventListener("click", function () {
-				if (confirm("Deseja mesmo cadastrar um restaurante?") == true) {
-					window.location.href = "./pages/cadastro-restaurante.html";
-				}
-				else {
-					window.alert("Ok, Pode aproveitar o site!");
-				};
-			});
+	<script>
+		document.getElementById("pagina-cadastro").addEventListener("click", function () {
+			if (confirm("Deseja mesmo cadastrar um restaurante?") == true) {
+				window.location.href = "./pages/cadastro-restaurante.html";
+			} else {
+				window.alert("Ok, Pode aproveitar o site!");
+			}
+		});
 
-		</script>
+		const menuToggle = document.querySelector('.menu-toggle');
+		const menuList = document.querySelector('.menu-list');
 
-		<footer>
-			<div class="scroll-top" style="right: -100px; display: none;">
-				<a href="javascript:void(0);">
-					<span class="glyphicon"></span>
-				</a>
-			</div>
-			<div class="menu" id="menu-rodape">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-3">
-							<ul class="nav nav-tabs" id="myTab" role="tablist">
-								<li class="nav-item active">
-									<a id="footer-menu-tab-0" data-toggle="tab"
-										href="https://www.guarapuava.pr.gov.br/midias/#footer-menu-0" role="tab"
-										aria-controls="footer-menu-0" aria-selected="true">Administração</a>
-								</li>
-								<li class="nav-item ">
-									<a id="footer-menu-tab-1" data-toggle="tab"
-										href="https://www.guarapuava.pr.gov.br/midias/#footer-menu-1" role="tab"
-										aria-controls="footer-menu-1" aria-selected="true">Mídias e Documentos</a>
-								</li>
-								<li class="nav-item ">
-									<a id="footer-menu-tab-2" data-toggle="tab"
-										href="https://www.guarapuava.pr.gov.br/midias/#footer-menu-2" role="tab"
-										aria-controls="footer-menu-2" aria-selected="true">Serviço geral</a>
-								</li>
-								<li class="nav-item ">
-									<a id="footer-menu-tab-3" data-toggle="tab"
-										href="https://www.guarapuava.pr.gov.br/midias/#footer-menu-3" role="tab"
-										aria-controls="footer-menu-3" aria-selected="true">Serviços para Empresa</a>
-								</li>
-								<li class="nav-item ">
-									<a id="footer-menu-tab-4" data-toggle="tab"
-										href="https://www.guarapuava.pr.gov.br/midias/#footer-menu-4" role="tab"
-										aria-controls="footer-menu-4" aria-selected="true">Serviços para Comunidade</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-xs-12 col-sm-8 col-sm-offset-1">
-							<div class="tab-content" id="myTabContent">
-								<div class="tab-pane fade active in" id="footer-menu-0" role="tabpanel"
-									aria-labelledby="footer-menu-tab-0">
-									<nav>
-										<ul>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/prefeito-municipal/"
-													target="">Prefeito Municipal</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/vice-prefeito/"
-													target="">Vice-Prefeito</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/administracao/"
-													target="">Administração</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/agricultura/"
-													target="">Agricultura</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/assistencia-social/"
-													target="">Assistência e Desenvolvimento Social</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/ciencia-tecnologia-e-inovacao/"
-													target="">Ciência, tecnologia e inovação</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/comunicacao/"
-													target="">Comunicação</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/cultura/"
-													target="">Cultura</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/educacao-e-cultura/"
-													target="">Educação</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/esporte-e-recreacao/"
-													target="">Esportes e Recreação</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/financas/"
-													target="">Finanças</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/habitacao/"
-													target="">Habitação</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/desenvolvimento-economico-e-inovacao/"
-													target="">Desenvolvimento Econômico </a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/meio-ambiente/"
-													target="">Meio Ambiente</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/ouvidoria-geral/"
-													target="">Ouvidoria Geral</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/planejamento-e-urbanismo/"
-													target="">Planejamento e Urbanismo</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/politicas-publicas-para-mulheres/"
-													target="">Políticas Públicas Para Mulheres</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/procuradoria/"
-													target="">Procuradoria</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/saude/"
-													target="">Saúde</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/secretaria-executiva/"
-													target="">Secretaria Executiva</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/obras/"
-													target="">Obras</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/transito-e-transporte/"
-													target="">Trânsito e Transporte</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/turismo/"
-													target="">Turismo </a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-indireta/guarapuava-prev/"
-													target="">Guarapuava Prev</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-indireta/surg/"
-													target="">Surg</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-indireta/fundacao-proteger/"
-													target="">Fundação Proteger</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/administracao-indireta/procon/"
-													target="">Procon</a></li>
-										</ul>
-									</nav>
-								</div>
-								<div class="tab-pane fade " id="footer-menu-1" role="tabpanel"
-									aria-labelledby="footer-menu-tab-1">
-									<nav>
-										<ul>
-											<li><a href="https://www.guarapuava.pr.gov.br/midias/" target="">Mídias</a>
-											</li>
-											<li><a href="https://www.guarapuava.pr.gov.br/boletins-oficiais/"
-													target="">Boletins Oficias</a></li>
-											<li><a href="http://www.pmg.pr.gov.br/legislacao/"
-													target="_blank">Legislação</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/portal-da-transparencia/licitacoes/"
-													target="">Editais de Licitação</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos/concursos-2/"
-													target="">Editais de Concurso</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/portal-da-transparencia/"
-													target="">Transparência</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/midias/" target=""></a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/portal-da-transparencia/relatorios-e-publicacoes/"
-													target="">Relatórios e Publicações</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/midias/" target=""></a></li>
-										</ul>
-									</nav>
-								</div>
-								<div class="tab-pane fade " id="footer-menu-2" role="tabpanel"
-									aria-labelledby="footer-menu-tab-2">
-									<nav>
-										<ul>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos/agencia-do-empreendedor/"
-													target="">Agência do empreendedor</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos/agencia-do-trabalhador/"
-													target="">Agência do Trabalhador</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos/banco-de-projetos/"
-													target="">Banco de Projetos</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos/beneficiados-bolsa-familia/"
-													target="">Beneficiados Bolsa Família</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos/carteirinha-do-autista/"
-													target="">Carteirinha do Autista</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos/editais-de-contribuicao-e-melhorias/"
-													target="">Editais de contribuição e melhorias</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos/concursos-2/"
-													target="">Concursos e Processos Seletivos</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos/obituario/"
-													target="">Obituário</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos/portal-servidor/"
-													target="">Portal do Servidor</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos/ouvidoria-sugestoes-dicas-e-reclamacoes/"
-													target="">Ouvidoria: Sugestões, Dicas e Reclamações</a></li>
-										</ul>
-									</nav>
-								</div>
-								<div class="tab-pane fade " id="footer-menu-3" role="tabpanel"
-									aria-labelledby="footer-menu-tab-3">
-									<nav>
-										<ul>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-empresa/acesso-nfs-edeiss/"
-													target="">Acesso NFS-E/DEISS</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-empresa/alvara-taxas/"
-													target="">Alvará/Taxas</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-empresa/certidao-negativa-de-debito/"
-													target="">Certidão Negativa de Débito</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-empresa/geracao-de-iss-deiss/"
-													target="">Declaração ISS/DEISS</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-empresa/iss-fixo/"
-													target="">ISS Fixo</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-empresa/protocolo-web/"
-													target="">Protocolo Web</a></li>
-										</ul>
-									</nav>
-								</div>
-								<div class="tab-pane fade " id="footer-menu-4" role="tabpanel"
-									aria-labelledby="footer-menu-tab-4">
-									<nav>
-										<ul>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-comunidade/certidao-negativa-de-debito/"
-													target="">Certidão negativa de Débito</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-comunidade/emissao-de-segunda-via/"
-													target="">Guias de Recolhimento</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-comunidade/iluminacao-publica/"
-													target="">Iluminação Pública</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-comunidade/iss-obras/"
-													target="">ISS Construção</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-comunidade/negativa-de-itbi/"
-													target="">Negativa de ITBI</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-comunidade/protocolo-web/"
-													target="">Protocolo Web</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-comunidade/tabela-de-ufm/"
-													target="">Tabela de UFM</a></li>
-											<li><a href="https://www.guarapuava.pr.gov.br/servicos-comunidade/taxas/"
-													target="">Taxas</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		
+		menuToggle.addEventListener('click', () => {
+			menuList.classList.toggle('show');
+		});
+
+	</script>
+
+	<script src="./obj/restaurante.js"></script>
+
 </body>
+
+<footer class="footer">
+	<div class="social-media">
+		<p>Siga a gente nas redes sociais</p>
+		<a href="https://www.instagram.com/"><img src="assets/resources/img/social-instagram.png" alt="Instagram"></a>
+		<a href="https://www.facebook.com/"><img src="assets/resources/img/social-facebook.png" alt="Facebook"></a>
+		<a href="https://twitter.com/"><img src="assets/resources/img/social-telegram.png" alt="Twitter"></a>
+	  </div>
+	<div class="contact-info">
+	  <h1>Contato</h1>
+	  <p>Telefone: 42 3142-1000</p>
+	  <p>Endereço: Rua Brigadeiro Rocha, 2777, Centro | 85010-210 | Guarapuava – Pr</p>
+	  <p>Horário de atendimento: 13h - 17h</p>
+	</div>
+  </footer>
+  
+
 </html>
