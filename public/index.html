@@ -10,6 +10,9 @@
 	<link rel="stylesheet" type="text/css" href="../assets/libraries/css/css-cadastro-restaurante.css">
 	<link rel="stylesheet" type="text/css" href="./assets/libraries/css/css-guia-gastro.css">
 	<link rel="stylesheet" type="text/css" href="./assets/libraries/css/css-prefeitura.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="./obj/restaurante.js"></script>
 </head>
 
 <header class="header">
@@ -20,9 +23,10 @@
 	</div>
 	<nav class="menu">
 		<ul class="menu-list">
-			<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/">Administração</a></li>
+			<li><a
+					href="https://guarapuava.atende.net/autoatendimento/servicos/acesso-ao-sistema-fiscal-web-novo/detalhar/1">NFE
+					/ NFCE</a></li>
 			<li><a href="https://www.guarapuava.pr.gov.br/midias/">Midias</a></li>
-			<li><a href="https://www.guarapuava.pr.gov.br/administracao-direta/">Administração Direta</a></li>
 			<li><a href="http://www.pmg.pr.gov.br/legislacao/">Legislação</a></li>
 		</ul>
 		</button>
@@ -49,33 +53,38 @@
 			}
 		});
 
-		const menuToggle = document.querySelector('.menu-toggle');
 		const menuList = document.querySelector('.menu-list');
 
-		menuToggle.addEventListener('click', () => {
+		menuList.addEventListener('click', () => {
 			menuList.classList.toggle('show');
 		});
 
+		$(document).ready(function () {
+			var childElements = $("footer").children(".social-media, .contact-info");
+			childElements.css("font-weight", "bold");
+		});
+
+
 	</script>
-
-	<script src="./obj/restaurante.js"></script>
-
 </body>
 
 <footer class="footer">
 	<div class="social-media">
 		<p>Siga a gente nas redes sociais</p>
-		<a href="https://www.instagram.com/"><img src="assets/resources/img/social-instagram.png" alt="Instagram"></a>
-		<a href="https://www.facebook.com/"><img src="assets/resources/img/social-facebook.png" alt="Facebook"></a>
-		<a href="https://twitter.com/"><img src="assets/resources/img/social-telegram.png" alt="Twitter"></a>
-	  </div>
-	<div class="contact-info">
-	  <h1>Contato</h1>
-	  <p>Telefone: 42 3142-1000</p>
-	  <p>Endereço: Rua Brigadeiro Rocha, 2777, Centro | 85010-210 | Guarapuava – Pr</p>
-	  <p>Horário de atendimento: 13h - 17h</p>
+		<a href="https://www.instagram.com/guarapuava_pref/"><img src="assets/resources/img/social-instagram.png"
+				alt="Instagram"></a>
+		<a href="https://www.facebook.com/PrefeituraGuarapuava"><img src="assets/resources/img/social-facebook.png"
+				alt="Facebook"></a>
+		<a href="https://twitter.com/guarapuava_pref"><img src="assets/resources/img/social-telegram.png"
+				alt="Twitter"></a>
 	</div>
-  </footer>
-  
-
+	<div class="contact-info">
+		<h1>Contato</h1>
+		<p>Telefone: 42 3142-1000</p>
+		<h1>Endereço</h1>
+		<p>Rua Brigadeiro Rocha, 2777, Centro | 85010-210 | Guarapuava – Pr</p>
+		<h1>Atendimento</h1>
+		<p>Horário de atendimento: 13h - 17h</p>
+	</div>
+</footer>
 </html>

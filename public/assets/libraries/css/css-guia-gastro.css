@@ -97,44 +97,9 @@
     white-space: nowrap; /* Exibe o texto em uma única linha */
     overflow: hidden; /* Oculta o texto extra, se houver */
     text-overflow: ellipsis; /* Adiciona reticências (...) quando o texto excede a largura do botão */
+    transition: transform 0.3s; /* Adiciona uma transição suave */
   }
-  
-  .footer {
-    display: flex;
-    background-color: #1e0eaa;
-    color: #fff;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
+
+  #pagina-cadastro:hover {
+    transform: scale(1.1); /* Aplica o efeito de zoom */
   }
-  
-  .social-media {
-    flex-basis: 30%;
-    margin-right: 20px;
-  }
-  
-  .social-media p {
-    margin-bottom: 10px;
-  }
-  
-  .social-media-logo {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-  }
-  
-  .contact-info {
-    flex-basis: 70%;
-    border-left: 1px solid #fff;
-    padding-left: 20px;
-  }
-  
-  .contact-info p {
-    margin: 5px 0;
-    font-size: 14px;
-  }
-  
-  
-  
-  
