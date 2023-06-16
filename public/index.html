@@ -42,9 +42,15 @@
 
 	<button href="./pages/cadastro-restaurante.html" id="pagina-cadastro" class="btn btn-primary">CADASTRAR
 		RESTAURANTE</button>
-
+	<center> <div id="slideElement" class="hidden">aproveitando o site!</div> </center>
 
 	<script>
+		$(document).ready(function () {
+			$("#pagina-cadastro").click(function () {
+				$("#slideElement").slideDown();
+			});
+		})
+
 		document.getElementById("pagina-cadastro").addEventListener("click", function () {
 			if (confirm("Deseja mesmo cadastrar um restaurante?") == true) {
 				window.location.href = "./pages/cadastro-restaurante.html";
@@ -63,8 +69,6 @@
 			var childElements = $("footer").children(".social-media, .contact-info");
 			childElements.css("font-weight", "bold");
 		});
-
-
 	</script>
 </body>
 
@@ -83,8 +87,7 @@
 		<p>Telefone: 42 3142-1000</p>
 		<h1>Endereço</h1>
 		<p>Rua Brigadeiro Rocha, 2777, Centro | 85010-210 | Guarapuava – Pr</p>
-		<h1>Atendimento</h1>
-		<p>Horário de atendimento: 13h - 17h</p>
 	</div>
 </footer>
+
 </html>
