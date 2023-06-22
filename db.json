@@ -55,6 +55,14 @@
       "endereco": "Rua Sérgio Gasparetto, 41, 41",
       "telefone": "42984214715",
       "horarioFuncionamento": ""
+    },
+    {
+      "id": "12121",
+      "name": "testeeee",
+      "imagem": "assets/resources/imgGuiaGastronomico/hugo.png",
+      "endereco": "Rua Sérgio Gasparetto, 41, 41",
+      "telefone": "(11) 111111111",
+      "horarioFuncionamento": "06-10"
     }
   ],
   "users": [

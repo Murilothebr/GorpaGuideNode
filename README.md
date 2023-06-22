@@ -38,18 +38,18 @@ Acesso aos elementos de um formulário via hierarquia (caminho) de objetos, ou s
 - [ ] Uso de seletores CSS hierárquicos estáticos - ancestral/descendente, pai/filho, anterior/próximo
 - [x] Uso de seletores hierárquicos dinâmicos, ou seja, via métodos do JQuery - parent/children/next
 - [x] Efeitos fade ou slide
-- [ ] Especificar o tratador de algum evento para um elemento DOM via jQuery - deve ser um evento diferente do ready
-- [ ] Manipulação do CSS via função css() e addClass() ou removeClass()
-- [ ] Manipulação do conteúdo de um input e div usando jQuery
+- [x] Especificar o tratador de algum evento para um elemento DOM via jQuery - deve ser um evento diferente do ready
+- [x] Manipulação do CSS via função css() e addClass() ou removeClass()
+- [x] Manipulação do conteúdo de um input e div usando jQuery
 - [ ] Aplicar um plugin do jQuery (por exemplo, jQuery Mask Plugin)
 
 Web Storage - LocalStorage ou SessionStorage
-- [ ] Leitura e escrita de dados simples - dados primivos como string, number, boolean
-- [ ] Leitura e escrita de JSON - dado transformado a partir de um objeto
-- [ ] Criar e guardar um dado em um Cookie
+- [x] Leitura e escrita de dados simples - dados primivos como string, number, boolean
+- [x] Leitura e escrita de JSON - dado transformado a partir de um objeto
+- [x] Criar e guardar um dado em um Cookie
 
 Requisições assíncronas
 - [ ] Requisições AJAX para uma implementação funcional do backend em ExpressJS na plataforma Node
-- [ ] (Obrigatório) Requisições AJAX para uma API Fake - JSON Server 
+- [x] (Obrigatório) Requisições AJAX para uma API Fake - JSON Server 
 - [ ] Requisições AJAX para uma API Rest pública qualquer (Busca CEP API ou IBGE API ou outra).
 

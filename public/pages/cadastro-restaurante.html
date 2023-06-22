@@ -97,8 +97,8 @@
 
 <script>
 	function formataremTelefoneADivFodase() {
-		const inputTelefone = document.getElementById('phone');
-		let numeroTelefone = inputTelefone.value.replace(/\D/g, '');
+		const inputTelefone = $('#phone');
+		let numeroTelefone = inputTelefone.val().replace(/\D/g, '');
 
 		if (numeroTelefone.length > 13) {
 			numeroTelefone = numeroTelefone.substr(0, 13);
@@ -112,9 +112,9 @@
 			}
 		}
 
-		inputTelefone.value = numeroTelefone;
+		inputTelefone.val(numeroTelefone);
 	}
-
+	
 	var elementsByClass = $(".form-group");
 	elementsByClass.css("font-weight", "bold");
 
