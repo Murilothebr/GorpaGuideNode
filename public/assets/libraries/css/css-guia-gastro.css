@@ -4,6 +4,10 @@
   justify-content: space-around;
 }
 
+.text-center h1 {
+  color: #5c6ac4 !important; 
+}
+
 .card-body {
   width: 50%;
   border-radius: 10px;
