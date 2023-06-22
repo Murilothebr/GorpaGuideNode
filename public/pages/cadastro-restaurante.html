@@ -63,7 +63,7 @@
 				<div class="form-group">
 					<label for="phone">Telefone</label>
 					<input type="tel" class="form-control" id="phone" name="phone"
-						pattern="([0-9]{2}) [0-9]{4,5}-[0-9]{4}$" oninput="formataremTelefoneADivFodase()"
+						pattern="([0-9]{2}) [0-9]{4,5}[0-9]{4}$" oninput="formataremTelefoneADivFodase()"
 						oninvalid="setCustomValidity('Por favor, preencha o campo telefone no padrão, (xx) xxxx-xxxx')"
 						required>
 				</div>
@@ -105,14 +105,14 @@
 		}
 
 		if (numeroTelefone.length > 2) {
-			numeroTelefone = (${ numeroTelefone.substr(0, 2) }) ${ numeroTelefone.substr(2) };
+			numeroTelefone = '(' + numeroTelefone.substr(0, 2) + ') ' + numeroTelefone.substr(2);
 
 			if (numeroTelefone.length > 14) {
 				numeroTelefone = numeroTelefone.substr(0, 14);
 			}
 		}
 
-		phoneInput.value = numeroTelefone;
+		inputTelefone.value = numeroTelefone;
 	}
 
 	var elementsByClass = $(".form-group");
@@ -177,7 +177,7 @@
 			event.preventDefault();
 
 			if (document.getElementById('name').checkValidity() &&
-				document.getElementById('inputPhoto').checkValidity() && document.getElementById('phone').checkValidity()) {
+				document.getElementById('inputPhoto').checkValidity()) {
 
 				const dadosDoFormulario = {
 					id: document.getElementById('id').value,
