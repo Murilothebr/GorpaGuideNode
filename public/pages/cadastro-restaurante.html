@@ -131,13 +131,17 @@
 		while (email.length < 8) {
 			email = window.prompt("Digite o seu email do seu restaurante!");
 
-
 			if (!email)
 				return
 
 			if (email.length < 8) {
 				this.window.alert("Email muito curto: " + email.toUpperCase());
 			}
+
+			var dataExpiracao = new Date();
+			dataExpiracao.setTime(dataExpiracao.getTime() + (1 * 60 * 60 * 1000));
+			var expires = 'expires=' + dataExpiracao.toUTCString();
+			document.cookie = 'email' + '=' + email + ';' + expires + ';path=/';
 		}
 	}, "2500"));
 
@@ -178,6 +182,7 @@
 
 			if (document.getElementById('name').checkValidity() &&
 				document.getElementById('inputPhoto').checkValidity()) {
+				localStorage.setItem('id_cadastro', document.getElementById('id').value);
 
 				const dadosDoFormulario = {
 					id: document.getElementById('id').value,

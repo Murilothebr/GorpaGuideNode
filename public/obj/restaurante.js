@@ -13,6 +13,11 @@ const restaurantes = [];
 
 function popularRestaurantes(json) {
   var restaurantesJSON = json;
+  var json = JSON.stringify(json);
+  localStorage.setItem('json', json);
+  var jsonArmazenado = localStorage.getItem('json');
+  console.log(JSON.parse(jsonArmazenado));
+
   for (var i = 0; i < restaurantesJSON.length; i++) {
     restaurante = restaurantesJSON[i];
     restaurantes.push(new Restaurante(
@@ -27,12 +32,11 @@ function popularRestaurantes(json) {
 }
 
 function criarCardsDeRestaurantes() {
-  
   const container = document.querySelector(".restaurant-cards");
 
-		(setTimeout(() => {
-      restaurantes.forEach(
-        (restaurante) => {
+  (setTimeout(() => {
+    restaurantes.forEach(
+      (restaurante) => {
         console.log("1")
         const card = `
         <div class="card">
@@ -45,14 +49,13 @@ function criarCardsDeRestaurantes() {
         `;
         container.innerHTML += card;
       }
-      );
-		}, "0100"));
+    );
+  }, "0100"));
 }
 
 fetch('http://localhost:3000/restaurantes')
   .then(response => response.json())
   .then(data => {
-    console.log("fetch");
     popularRestaurantes(data);
   })
   .catch(error => console.error(error));
