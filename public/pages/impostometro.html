@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="supports-js supports-fontface supports-generatedcontent">
+
+<head>
+
+    <title>
+        Guia Gastronomico | Prefeitura de Guarapuava
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="../assets/libraries/css/css-cadastro-restaurante.css">
+    <link rel="stylesheet" type="text/css" href="../assets/libraries/css/css-guia-gastro.css">
+    <link rel="stylesheet" type="text/css" href="../assets/libraries/css/css-prefeitura.css">
+    <link rel="stylesheet" type="text/css" href="../assets/libraries/css/css-impostometro.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/obj/restaurante.js"></script>
+
+</head>
+
+<header class="header">
+    <div class="logo">
+        <a href="/pages/site prefeitura guarapuava/HomeGuarapuava.html">
+            <img src="/assets/resources/img/logo_prefeitura.png" alt="Logo">
+        </a>
+    </div>
+    <nav class="menu">
+        <ul class="menu-list">
+            <li><a href="http://localhost:4000">GorpaGuide</a></li>
+            <li><a
+                    href="https://guarapuava.atende.net/autoatendimento/servicos/acesso-ao-sistema-fiscal-web-novo/detalhar/1">NFE
+                    / NFCE</a></li>
+            <li><a href="https://www.guarapuava.pr.gov.br/midias/">Midias</a></li>
+        </ul>
+        </button>
+    </nav>
+</header>
+
+<body>
+    <div class="impostometro">
+        <iframe id="impostometro" src="https://impostometro.com.br/widget/contador/pr?municipio=guarapuava" width="728"
+            height="228" scrolling="no" frameborder="0"></iframe>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function ajustarAlturaIframe() {
+        var iframe = $('#impostometro');
+        var windowHeight = $(window).height();
+        var headerHeight = $('.header').outerHeight();
+        var footerHeight = $('.footer').outerHeight();
+        var desiredHeight = windowHeight - headerHeight - footerHeight;
+
+        iframe.height(desiredHeight);
+    }
+
+    $(window).on('resize', function () {
+        ajustarAlturaIframe();
+    });
+
+    $(document).ready(function () {
+        ajustarAlturaIframe();
+    });
+</script>
+
+<div class="footer">
+    <div class="social-media">
+        <p>Siga a gente nas redes sociais</p>
+        <a href="https://www.instagram.com/guarapuava_pref/"><img src="../assets/resources/img/social-instagram.png"
+                alt="Instagram"></a>
+        <a href="https://www.facebook.com/PrefeituraGuarapuava"><img src="../assets/resources/img/social-facebook.png"
+                alt="Facebook"></a>
+        <a href="https://twitter.com/guarapuava_pref"><img src="../assets/resources/img/social-telegram.png"
+                alt="Twitter"></a>
+    </div>
+    <div class="contact-info">
+        <h1>Contato</h1>
+        <p>Telefone: 42 3142-1000</p>
+        <h1>Endereço</h1>
+        <p>Rua Brigadeiro Rocha, 2777, Centro | 85010-210 | Guarapuava – Pr</p>
+    </div>
+</div>
+
+</html>
