@@ -57,12 +57,28 @@
       "horarioFuncionamento": ""
     },
     {
+      "id": "1231",
+      "name": "Murilo Nunes Marcal",
+      "imagem": "assets/resources/imgGuiaGastronomico/hugo.png",
+      "endereco": "Rua Sérgio Gasparetto, 41, 41",
+      "telefone": "122121",
+      "horarioFuncionamento": "12"
+    },
+    {
       "id": "12",
       "name": "Murilo Nunes Marcal",
       "imagem": "assets/resources/imgGuiaGastronomico/hugo.png",
       "endereco": "Rua Sérgio Gasparetto, 41, 41",
-      "telefone": "(42) 98844-6492",
+      "telefone": "42984214715",
       "horarioFuncionamento": ""
+    },
+    {
+      "id": "12311",
+      "name": "2211",
+      "imagem": "assets/resources/imgGuiaGastronomico/hugo.png",
+      "endereco": "212",
+      "telefone": "21212",
+      "horarioFuncionamento": "1221"
     }
   ],
   "users": [
