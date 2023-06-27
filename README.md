@@ -51,5 +51,5 @@ Web Storage - LocalStorage ou SessionStorage
 Requisições assíncronas
 - [ ] Requisições AJAX para uma implementação funcional do backend em ExpressJS na plataforma Node
 - [x] (Obrigatório) Requisições AJAX para uma API Fake - JSON Server 
-- [ ] Requisições AJAX para uma API Rest pública qualquer (Busca CEP API ou IBGE API ou outra).
+- [X] Requisições AJAX para uma API Rest pública qualquer (Busca CEP API ou IBGE API ou outra).
 

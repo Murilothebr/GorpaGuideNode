@@ -1,18 +1,30 @@
 .impostometro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  #impostometro {
-    max-width: 100%;
-    height: auto;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  height: calc(100vh - 80px); 
+  flex-direction: column;
+}
 
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+#impostometro {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-weather {
+  width: 300px;
+  padding-top: 100px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cold {
+  color: blue;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
