@@ -1,11 +1,19 @@
 # GorpaGuideNode
 
+Projeto de um Guia Gastronomico da minha cidade, com impostometro e um marcador de temperatura usando a API publica do OpenWeather
 O projeto tinha como objetivo a pratica dentro do curso meu curso na UTFPR, utilizando Node.js | Ajax | Express e DB.json
 
 ## Como rodar:
 
-Aplicação:  node server.js
-Db : npx json-server --watch db.json
+#### Aplicação:  node server.js
+#### Db : npx json-server --watch db.json
+
+
+## Pagina Principal (cards)
+
+![image](https://github.com/Murilothebr/GorpaGuideNode/assets/73948824/bf85517d-4de6-4c8b-9335-461c8b2f50b3)
+
+## Parte I
 
 ### Formulário
 
